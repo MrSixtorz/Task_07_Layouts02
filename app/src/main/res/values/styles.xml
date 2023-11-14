@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Botones" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">36dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.Botones.Azules" parent="AppTheme.Botones">
+        <item name="android:background">#00537D</item>
+    </style>
+    <style name="AppTheme.Encabezado" parent="AppTheme.Botones">
+        <item name="android:background">#080909</item>
+    </style>
+    <style name="AppTheme.Botones.Rojos" parent="AppTheme.Botones">
+        <item name="android:background">#EA4D39</item>
+    </style>
+</resources>

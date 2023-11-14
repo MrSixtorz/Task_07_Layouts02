@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="array2">
+        <item>Ventas</item>
+        <item>Informatica</item>
+        <item>jardineria</item>
+    </string-array>
+</resources>
