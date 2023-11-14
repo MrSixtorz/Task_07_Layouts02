@@ -1,5 +1,6 @@
 package com.example.task_07
 
+//importación de paquetes
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
+    // Declaración de variables
     private lateinit var navigationView: NavigationView
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var openDrawer: Button
@@ -24,10 +26,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Incialización de las vistas
         drawerLayout = findViewById(R.id.drawer_layout)
         navigationView= findViewById(R.id.navigationview)
         openDrawer= findViewById(R.id.btn_open)
+        btnLinear=findViewById(R.id.btnLinear)
+        btnTable=findViewById(R.id.btnTable)
+        btnRelative=findViewById(R.id.btnRelative)
+        btnGrid=findViewById(R.id.btnGrid)
+        navigationView = findViewById(R.id.navigationview)
 
+        //manejo del botón para el navegador lateral
         openDrawer.setOnClickListener{
             if(drawerLayout.isDrawerOpen(GravityCompat.END)){
                 drawerLayout.closeDrawer(GravityCompat.END)
@@ -35,12 +44,7 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.openDrawer(GravityCompat.END)
         }
 
-        btnLinear=findViewById(R.id.btnLinear)
-        btnTable=findViewById(R.id.btnTable)
-        btnRelative=findViewById(R.id.btnRelative)
-        btnGrid=findViewById(R.id.btnGrid)
-
-
+        //Configuración de los clics en los botones para abrir actividades del menu principal
         btnLinear.setOnClickListener {
 
             val intent= Intent(this@MainActivity,Linear::class.java)
@@ -61,7 +65,8 @@ class MainActivity : AppCompatActivity() {
             val intent= Intent(this@MainActivity,Grid::class.java)
             startActivity(intent)
         }
-        navigationView = findViewById(R.id.navigationview)
+
+        // Manejo de las selecciones en el menú lateral
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.one -> {
